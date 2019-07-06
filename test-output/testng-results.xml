@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64686" started-at="2019-07-06T01:39:39Z" finished-at="2019-07-06T01:40:44Z">
+  <suite name="Suite" duration-ms="78281" started-at="2019-07-06T05:25:55Z" finished-at="2019-07-06T05:27:13Z">
     <groups>
+      <group name="Regression">
+        <method signature="CreateIncident.createNewIncident()[pri:0, instance:servicenow.CreateIncident@27c20538]" name="createNewIncident" class="servicenow.CreateIncident"/>
+      </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="64686" started-at="2019-07-06T01:39:39Z" finished-at="2019-07-06T01:40:44Z">
+    <test name="Test" duration-ms="78281" started-at="2019-07-06T05:25:55Z" finished-at="2019-07-06T05:27:13Z">
       <class name="servicenow.CreateIncident">
-        <test-method status="FAIL" signature="createNewIncident()[pri:0, instance:servicenow.CreateIncident@402a079c]" name="createNewIncident" duration-ms="64670" started-at="2019-07-06T01:39:39Z" finished-at="2019-07-06T01:40:44Z">
+        <test-method status="FAIL" signature="createNewIncident()[pri:0, instance:servicenow.CreateIncident@27c20538]" name="createNewIncident" duration-ms="78249" started-at="2019-07-06T05:25:55Z" finished-at="2019-07-06T05:27:13Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='System Administrator']"}
@@ -16,8 +19,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'DESKTOP-4JBAKI8', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\LOCALU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52760}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: beb008a189faf22539dc69308370c289
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\LOCALU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52198}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b0dbdff0f0c17fe2facf7e6d0ec9586c
 *** Element info: {Using=xpath, value=//span[text()='System Administrator']}]]>
             </message>
             <full-stacktrace>
@@ -27,8 +30,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
 System info: host: 'DESKTOP-4JBAKI8', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\LOCALU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52760}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: beb008a189faf22539dc69308370c289
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\LOCALU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52198}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b0dbdff0f0c17fe2facf7e6d0ec9586c
 *** Element info: {Using=xpath, value=//span[text()='System Administrator']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -77,6 +80,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- createNewIncident -->
       </class> <!-- servicenow.CreateIncident -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

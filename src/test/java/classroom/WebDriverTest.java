@@ -3,12 +3,16 @@ package classroom;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.DataProvider;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utility.ReadExcel;
 
 public class WebDriverTest {
 	public RemoteWebDriver driver;
@@ -50,10 +54,28 @@ public class WebDriverTest {
 	 */
 
 	public void selectValByVisibileText(WebElement dropdown, String value) {
-		Select dp = new Select(dropdown);
+		Select dp = null;
+		try {
+			dp = new Select(dropdown);
+		} catch (NoSuchElementException e) {
+			System.out.println("The element could not be found "+dropdown);
+			e.printStackTrace();
+		} catch (WebDriverException e) {
+			System.out.println("General Webdriver Exception occured");
+		}
 		dp.selectByVisibleText(value);
 	}
 
+	/*
+	 * TestNG - DataProvider
+	 */
+	
+	
+	@DataProvider(name="ExcelData", parallel=true)
+	public Object[][] excelData() {
+		return ReadExcel.readExcelData("TestData");
+	}
+	
 	// 
 
 }

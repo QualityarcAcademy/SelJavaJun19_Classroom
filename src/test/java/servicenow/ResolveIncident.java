@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import classroom.WebDriverTest;
 
 public class ResolveIncident extends WebDriverTest {
-	@Test()
+	@Test(groups= {"Sanity"})
 	public void resolveIncident() {
 		/*
 		 * This test case resolves an incident

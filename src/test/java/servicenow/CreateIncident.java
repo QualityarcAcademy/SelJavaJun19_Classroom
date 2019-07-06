@@ -13,7 +13,7 @@ import utility.ReadExcel;
 
 public class CreateIncident extends WebDriverTest {
 
-	@Test()
+	@Test(groups= {"Regression"})
 	public void createNewIncident() {
 		/*
 		 * This test case creates a new incident
@@ -21,7 +21,7 @@ public class CreateIncident extends WebDriverTest {
 		 */	
 
 		//Read the data
-		String[][] testData = ReadExcel.readExcelData("TestData");
+		//String[][] testData = ReadExcel.readExcelData("TestData");
 
 		//Launch application
 		openBrowser("https://dev61245.service-now.com/");
@@ -31,9 +31,9 @@ public class CreateIncident extends WebDriverTest {
 
 		//Login
 		driver.findElement(By.id("user_name")).clear();
-		driver.findElement(By.id("user_name")).sendKeys(testData[0][0]);
+		driver.findElement(By.id("user_name")).sendKeys("admin");
 		driver.findElement(By.id("user_password")).clear();
-		driver.findElement(By.id("user_password")).sendKeys(testData[0][1]);
+		driver.findElement(By.id("user_password")).sendKeys("2mzLWfzHoR5N");
 		driver.findElement(By.id("sysverb_login")).click();
 
 		//Verify login is successful
